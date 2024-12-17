@@ -34,6 +34,14 @@ public:
     bool isempty() {
         return top == -1;
     }
+    int peek(){
+        if(top==-1){
+            cout<<"stack is empty"<<endl;
+        }
+        else{
+            return stack[top];
+        }
+    }
 
     void display() {
         if (isempty()) {
@@ -55,8 +63,7 @@ int main() {
     sn.push(4);
     sn.push(10);
     sn.push(53);
+    cout<<"peek: "<<sn.peek()<<endl;
+    sn.pop();        
     sn.display();
-    sn.pop();
-    sn.display();
-
 }
